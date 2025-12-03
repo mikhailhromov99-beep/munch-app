@@ -1,0 +1,117 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.4rem;
+  color: var(--text-light);
+}
+
+.noRecipes {
+  text-align: center;
+  padding: 4rem;
+  color: var(--text-light);
+  background: var(--card-bg);
+  border-radius: 16px;
+  margin-top: 2rem;
+  border: 2px dashed var(--border);
+}
+
+.recipesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.recipeCard {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.15);
+  border: 2px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.recipeCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.25);
+}
+
+.recipeImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 2px solid var(--primary-light);
+}
+
+.fallbackImage {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, var(--primary-orange), var(--accent-yellow));
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-light);
+}
+
+.fallbackEmoji {
+  font-size: 4rem;
+}
+
+.recipeCard h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text-dark);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: linear-gradient(135deg, var(--primary-light), var(--accent-yellow));
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.recipeLink {
+  color: var(--primary-orange);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid var(--primary-orange);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.recipeLink:hover {
+  background: var(--primary-orange);
+  color: white;
+  transform: scale(1.05);
+}
