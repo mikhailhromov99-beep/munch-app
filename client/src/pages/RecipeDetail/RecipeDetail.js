@@ -1,8 +1,9 @@
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useRecipe } from '../../contexts/RecipeContext';
 import styles from './RecipeDetail.module.css';
+
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 const RecipeDetail = () => {
   const { id } = useParams();
