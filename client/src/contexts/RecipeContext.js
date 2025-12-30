@@ -1,3 +1,4 @@
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const RecipeContext = createContext();
@@ -20,7 +21,7 @@ export const RecipeProvider = ({ children }) => {
     setLoading(true);
     try {
       const queryParams = new URLSearchParams(filters).toString();
-      const response = await fetch(`/api/recipes?${queryParams}`);
+      const response = await fetch(`${API_URL}/api/recipes?${queryParams}`);
       const data = await response.json();
       setRecipes(data);
     } catch (error) {

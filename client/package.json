@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "proxy": "https://munch-api.onrender.com",
+  "proxy": "https://munch-app-amh5.onrender.com",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",

@@ -1,3 +1,4 @@
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useRecipe } from '../../contexts/RecipeContext';
@@ -12,7 +13,7 @@ const RecipeDetail = () => {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const response = await fetch(`/api/recipes/${id}`);
+        const response = await fetch(`${API_URL}/api/recipes/${id}`);
         const data = await response.json();
         setRecipe(data);
       } catch (error) {
